@@ -7,6 +7,8 @@ also run smart contracts and decentralized applications.
 
 Back in 1994 a man named Nick Szabo came up with the idea of smart contracts. Smart Contracts are a set of instruction executed in a
 decentralized way without the need for a centralized or third party intermediary.
+Smart contract cannot be altered (immutable), they automatically execute on the blockchain when certain conditions are met. Everyone
+on the blockchain can see the terms of the contract and the execution of the contract.
 
 Smart contracts removes centralizedforces and counterparty risk
 
@@ -27,3 +29,71 @@ hybrid smart contracts or interact with hybrid smart contracts.
 This is what Chainlink does, it brings in decentralized data and decentralized logic together to create hybrid smart contracts, making sure
 that the smart contract is decentralized end to end while giving them the feature we need. Chainlink allows for us to get data to upkeep, 
 get random numbers, or customize our smart contract in meaningful ways.
+
+Chainlink is the most popular and powerful decentralized oracle network, it is the one we're gonna be using in this course. It is also
+blockchain agnostic so it'll work on any blockchain out there.
+
+What is L2 or Layer2?
+
+The basic concept is that blockchains can get massive with the data in it. The basic answer is that we can hook many different blockchains
+into it to solve the scalibility issue. Like Ethereum is a main blockchain and (Arbitrum, Poygon, Optimism) are side chains built on top of
+Ethereum. Layer2s solve this scalibility issues.
+
+There are two types of Layer2s:
+
+1. Optimistic Rollups like Arbitrum and Optimism
+
+2. Zero Knowledge Rollups like zkSync and Polygon zkEVM
+
+
+
+Term Web3:
+
+Web1 is permissionless ope sourced web with static contents.
+
+Web2 is the permissioned web, with dynamic content. Where companies run your agreements on their servers.
+
+Web3 is the permissionless web with dynamic content. Where decentralized censorship resistant networks run your agreement and code. It 
+generally is accompanied by the idea of user owned ecosystems, where the protocols you interact with you also own a portion of, instead
+of solely being the product.
+
+
+What is the value of smart contracts? What problem does it solve?
+
+They create trust minimized agreements. They give rise to unbreakable agreements.
+The purpose of smart contracts is to solve the issue of breaking promises between two parties.
+
+When smart contracts work with oracles they can solve real world problems, create contracts that benefit the human kind taking the issue
+of risk and being cheated out of the equation.
+
+QUICK RECAP:
+
+- Bitcoin was the first protocol to implement blockchain technology in 2009. It was created by Satoshi Nakamoto.
+
+- Ethereum was the second protocol to implement blockchain technology in 2013. It was created by Vitalik Buterin. They enabled people to make
+smart contracts, decentralized trust minimized agreements. These smarts contracts can use data from real work using something decentralized oracle
+networks called Chainlink. They combine decentralized logic with decentralized real world data to create hybrid smart contracts and solving
+real world issues.
+
+Benefits of Blockchain:
+
+1- Decentralized, many node operators (software run by people) around the world run this network and make it decentralized.
+2- Every node can see the data on the blockchain which enables transparency and flexibility.
+3- Speed and efficiency in transactions is another benefit.
+4- Security and immutablity is also another benefit, this means once data is on the blockchain it cannot be changed.
+5- Hacking a blockchin is leaps and bounds more difficult than hacking a centralized database.
+6- Blockchain also remove the centralized forces and counterparty risk.
+
+
+What have Smart Contracts done so far?
+
+DeFi = Decentralized Finance
+DeApp = Decentralized Application
+DeX = Decentralized Exchange
+DAOs = Decentralized Autonoumous Organizations
+NFTs = Non Fungible Tokens
+
+
+Video paused here:
+
+https://youtu.be/umepbfKp5rI?t=2811
