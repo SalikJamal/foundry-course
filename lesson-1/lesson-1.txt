@@ -1,3 +1,29 @@
 Notes from Lesson 1 Blockchain Basics:
 
+Bitcoin was made by Satoshi Nakamoto implementing the first Blockchain in 2009. Bitcoin has a set amount for scarcity.
 
+Vitalik Buterin was the second person to implement another Blockchain called Ethereum in 2013. It was not only for transactions but to
+also run smart contracts and decentralized applications.
+
+Back in 1994 a man named Nick Szabo came up with the idea of smart contracts. Smart Contracts are a set of instruction executed in a
+decentralized way without the need for a centralized or third party intermediary.
+
+Smart contracts removes centralizedforces and counterparty risk
+
+The main difference between Ethereum and Bitcoin is that Ethereum has smart contracts which can be used to make applications, legal documents,
+agreements etc whereas in Bitcoin you can only make transactions.
+
+An issue with smart contracts is that if we want smart contracts to replace physical agreements in our lives they would need data from the real world.
+This issue is known as the "Oracle Problem". Smart contracts can't directly interact with real world data, they need oracles to do that.
+
+Blockchain Oracles are third part service that interacts with the off-chain world to provide external data or computation to smart contracts.
+If we want our blockchain to be fully decentralized then we can't work with a single oracle or a single source which will be running these oracles, to fix
+this we would need a decentralized oracle network similar to our blockchain. Both of these networks would need to be decentralized.
+
+Combining this on-chain decentralized logic (Smart Contracts) with off-chain decentralized data (Oracles) give rise to a new concept called 
+Hybrid Smart Contracts (On-chain + off-Chain) agreements. Most of the biggest protocols we interact with today on Web3 are using 
+hybrid smart contracts or interact with hybrid smart contracts.
+
+This is what Chainlink does, it brings in decentralized data and decentralized logic together to create hybrid smart contracts, making sure
+that the smart contract is decentralized end to end while giving them the feature we need. Chainlink allows for us to get data to upkeep, 
+get random numbers, or customize our smart contract in meaningful ways.
