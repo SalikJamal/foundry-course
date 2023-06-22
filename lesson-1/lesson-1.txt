@@ -92,8 +92,3 @@ DeApp = Decentralized Application
 DeX = Decentralized Exchange
 DAOs = Decentralized Autonoumous Organizations
 NFTs = Non Fungible Tokens
-
-
-Video paused here:
-
-https://youtu.be/umepbfKp5rI?t=2811
