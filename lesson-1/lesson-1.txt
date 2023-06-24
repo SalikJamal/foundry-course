@@ -93,6 +93,20 @@ DeX = Decentralized Exchange
 DAOs = Decentralized Autonoumous Organizations
 NFTs = Non Fungible Tokens
 
-Video paused at:
 
-https://youtu.be/umepbfKp5rI?t=3929
+
+What is Gas and transaction fees?
+
+Transactions are run by a group of nodes and their incentive to run these transactions
+is that they get paid a bit of native currency of the blockchain. This incentives people
+to run the network. They get paid more, as the more gas the transaction uses.
+
+What is Gas?
+Gas is a unit of computational measurement, the more complex a transaction is
+the more gas it will use.
+
+To calculate how much eth is going to be used in a transaction?
+
+Transaction fees = Gas Price * Gas used
+
+As busy the network gets, the expensive the gas fees becomes and vice versa.
