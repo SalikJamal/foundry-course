@@ -110,3 +110,31 @@ To calculate how much eth is going to be used in a transaction?
 Transaction fees = Gas Price * Gas used
 
 As busy the network gets, the expensive the gas fees becomes and vice versa.
+
+
+What is Hash??
+
+A hash is a unique fixed length string, meant to identify a piece of data. They are created
+by placing said data into a "hash function".
+
+A hash algorithm or hash function is a function that computes data into a unique hash.
+
+Ethereum uses Keccak256 for its hashing algorithm. The one we're gonna use is SHA256 Hash.
+
+The genesis is block is the first ever block that's created in the blockchain, its hash will always be zeros.
+
+Mining:
+
+The process of finding a "solution" to the blockchain "problem". In this case, the "probelm" was to find a hash
+that starts with four zeros. Nodes get paid for mining blocks.
+
+A block is a list of transactions mined together, it consists of nonce, transaction and previous hash, and a timestamp.
+
+Nonce:
+
+A "number used once" to find the "solution" to the blockchain problem. Its also used to define the transaciton number for an
+account/address.
+
+
+Signing Transactions:
+
