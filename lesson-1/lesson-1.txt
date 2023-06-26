@@ -138,3 +138,33 @@ account/address.
 
 Signing Transactions:
 
+A private key is only knows to the key holder, its used to sign transactions on the blockchain.
+
+Etherum and Bitcoin both use Eliliptic Curve Digital Signature Algorithm (ECDSA) which is a vairant of Digital Signautre Algorithm (DSA) 
+
+A private key is used to generate a public using the above alogrithm which can be give to anyone to make transactions with.
+
+The private key is like a password to digitally sign transactions on the blockchain.
+
+Mneomic phrase or secret phrase combined with account number gives different unique private keys.
+
+The public key is derived from your private key. Anyone can see it and use it to verify that a transaction came from you.
+
+
+Signing a transaction is a one way process. Someone with a private key signs a transaction by their private key being hashed with their transaction
+data. Anyone can then verify this new transacion hash with your public key.
+
+Private Key > Public Key/Address
+
+Secret Phrase >> Private Key >> Public Key/Address
+
+
+How are new private keys generated in metamask? 
+
+They take the secret phrase and combine it with the account number which goes through an algorithm, which gives them a private key.
+This private key then generates the public key.
+
+
+Gas II:
+
+Block Rewards & EIP 1559
