@@ -181,8 +181,33 @@ Then there is a max fees which is the maximum amount of gas you're willing to pa
 
 And then there is Max priority fees, which is the tip that you're willing to pay to the miner to get your transaction mined faster.
 
-Currently on Ethereum, the base fees ends up getting burnt, it also shows in the transaction fees. The max priority fees goes to the miner.
+Currently on Ethereum, the base fees always gets burnt, it also shows in the transaction fees. The max priority fees goes to the miner.
 
 This means that whenever you do a transaction, a small portion of Ethereum is removed from circulation forever. And the other part goes to the miner.
 
 The base gas fees for a transaction will go up and down depending on how busy the network is. If the network is busy, the base gas fees will go up and vice versa.
+
+The base fees get programmatically adjusted to try to target for all the blocks to be 50% full. If they're more than 50% full, then the base fees will go up and keep increaseing
+until the block usage go less than 50%.
+
+
+Recap:
+
+Unique teransaction hash that identifes the transacion
+Status and block number of the transaction
+Block confirmation is the number of blocks that have been mined after the block that your transaction was mined in.
+Timestamp of the transaction
+The initator of the transaction called "From"
+To is the address of the person you're sending the transaction to
+Value is the amount of ether you're sending
+Transaction fee is the amount of ether you're paying to send the transaction
+Gas price is the amount of ether you're paying per unit of gas
+Gas limit is the maximum amount of gas you're willing to pay for the transaction
+Usage is the amount of gas used by the transaction
+The base fees is the base network fees per gas
+Max gas is the maximum amount of gas you're willing to pay for the transaction
+Max priority is the max gas price + the tip you're willing to give the minor to get your transaction mined faster
+Burnt is the amount of ether that gets burnt from the base fees
+Txn Saving is the difference between how much was actually used and returned.
+You can see Txn Type, and Nonce as well.
+And then Input data, for transfers of Eth the input data will be empty. But for smart contract interactions, it will be the function call and the parameters of the function call.
