@@ -168,3 +168,21 @@ This private key then generates the public key.
 Gas II:
 
 Block Rewards & EIP 1559
+
+TLDR of this section;
+
+The more people use a chain, the more expensive it is to send transactions;
+
+
+According to EIP-1559, every transaction on Etherem network comes with base fees. This is the minimum gas price to send your transaction on
+the blockchain.
+
+Then there is a max fees which is the maximum amount of gas you're willing to pay for your transaction.
+
+And then there is Max priority fees, which is the tip that you're willing to pay to the miner to get your transaction mined faster.
+
+Currently on Ethereum, the base fees ends up getting burnt, it also shows in the transaction fees. The max priority fees goes to the miner.
+
+This means that whenever you do a transaction, a small portion of Ethereum is removed from circulation forever. And the other part goes to the miner.
+
+The base gas fees for a transaction will go up and down depending on how busy the network is. If the network is busy, the base gas fees will go up and vice versa.
