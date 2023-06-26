@@ -296,7 +296,7 @@ Arbitrum and Optimism are gonna be just as secure as Ethereum
 
 RECAP:
 
-Sybil attacks are prevented due to protols like POF and POS
+Sybil attacks are prevented due to protols like POW and POS
 51% attack become increasingly difficult as the network grows
 Consensus is the mechanism that allows the blockchain to agree on what the state of the network is
 Sharding and rollups are solutions to scalibility issues on layer 1s
