@@ -211,3 +211,94 @@ Burnt is the amount of ether that gets burnt from the base fees
 Txn Saving is the difference between how much was actually used and returned.
 You can see Txn Type, and Nonce as well.
 And then Input data, for transfers of Eth the input data will be empty. But for smart contract interactions, it will be the function call and the parameters of the function call.
+
+
+High Level Blockchain Fundamentals:
+
+Anyone can join the network and contribute in the blockchain, which is the a benefit of decentralization.
+There are some hardware requirements to run a node, which is the only hurdle in the way because it can be expensive to own.
+
+Blockchain don't have the issue of going down because there are many nodes running the blockchain and even if all node goes down except one, the blockchain will still be up and running.
+Majority rules in blockchains.
+
+Blockchain nodes keep list of all the transactions that have ever happened on the blockchain, this is called the ledger. This ledger is immutable and cannot be changed.
+
+What is consensus??
+
+Consensus is the process of agreeing on a single source of truth. In blockchain, this is done by the nodes agreeing on the next block to be added to the blockchain.
+
+In Etherem Blockchain reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
+
+The two main consensus mechanisms are Proof of Work and Proof of Stake.
+
+A consensus protocol in a blockchain can be broken down into two pieces:
+
+1. Chain Selection
+2. Sybil Resistance mechanism
+
+The mining algorithm or Proof of Work and Proof of Stake are known as the Sybil Resistance mechanism. This is what Bitcoin uses and Ethereum previously used. Currently Proof Of Stake is being used in Ethereum.
+
+Sybil attack is when one user or group of user pretend to be many users.
+
+Chain Selection rules is used to decide which chain is the correct chain. Bit coin uses the longest chain rules which means that whichever blockchain is the longest will be the one
+that rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty. Ethereum used 
+to use the longest chain rule too; however, now that Ethereum runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated 
+sum of validator votes, weighted by validator staked-ether balances.
+
+In proof of work, the nodes goes through computational work to find a nonce that will make the hash of the block start with a certain number of zeros. This is how the nodes agree on the next block to be added to the blockchain.
+Sometimes blockchains will intentionally make these computations difficult or easy to change whats called "Block Time"
+
+Block time is how long it takes for blocks to be published which is proportional to how hard these computations are.
+
+
+Proof of work is a combination of the chain rule and sybil resistance. The chain rule is the longest chain rule and the sybil resistance is the mining algorithm.
+
+The reward goes to the miners in proof of work and the reward goes to the validators in proof of stake.
+
+In proof of work all nodes are competing to find the answer to the blockchain riddle first, and whichever node finds it first gets to add the next block to the blockchain and gets rewarded for it.
+But this makes proof of work very enery intensive and expensive.
+
+
+Because of POW enery intensive nature, many blockchains are opting for proof of stake.
+
+Proof of Stake protocol is being used by Avalanch, Solana, Polygon, Polkadot and Ethereum.
+
+Proof of Stake nodes put up collateral as a sybil resistance mechanism. This collateral is called stake. If the misbehave in the network they're going to be removed some of their stake. This prevents entites making
+multiple account because each account has to pay minimum stake which is 32 Eth which is ($60,000 as of now). Miners are called validators in this protocol.
+
+IN proof of stake nodes are randomly chosen to propose a new block and the rest of the validators will validate if the node has proposed the block honestly.
+
+Pros are that it is more energy efficient, and a great sybil resistance mechanism.
+
+Cons are that its considered as a bit less decentralized network due to the upfront staking cost. 
+
+Two types of attacks that can happen in the blockchain world:
+
+
+1. Sybil Attack
+
+Sybil attack is when user creates many psudo anonymous identities to gain control of the network. This is why proof of work and proof of stake are sybil resistant.
+
+2. 51% Attack
+
+51% attack is when a user or group of users gain control of 51% of the network. This is why proof of work and proof of stake are sybil resistant. 
+51% attack has happened on Eth classic blockchain in the past. This is why the bigger a blockchain becomes the more decentralized it becomes.
+
+There are also terms Layer 1 and Layer 2 in the blockchain world.
+
+Layer 1 are base layer blockchain implementations like Bitcoin, Etherem and Avalanche.
+A layer 2 is any application build on top of a layer 1 blockchain like Chainlink, Arbitrum and Optimism.
+Artbitrum and Optimism are also known as Rollups because they rollup their transactions into a layer 1 like Ethereum.
+These L2s solve scalibility issues so people can use another blockchain to make transcations.
+
+Now L2s, and rollups are different from sidechains because sidechains derive their security form their own protocols whereas rollups derive theirs from base layers.
+Arbitrum and Optimism are gonna be just as secure as Ethereum
+
+RECAP:
+
+Sybil attacks are prevented due to protols like POF and POS
+51% attack become increasingly difficult as the network grows
+Consensus is the mechanism that allows the blockchain to agree on what the state of the network is
+Sharding and rollups are solutions to scalibility issues on layer 1s
+A layer 1 is a base blockchain implementations
+The scalibility problem is that there's not always enough block space for amount of transaction in them which leads to high gas prices
