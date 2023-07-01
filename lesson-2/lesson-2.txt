@@ -1,0 +1,1 @@
+Notes from Lesson 2 Solidity:
