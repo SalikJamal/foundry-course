@@ -10,7 +10,7 @@ decentralized way without the need for a centralized or third party intermediary
 Smart contract cannot be altered (immutable), they automatically execute on the blockchain when certain conditions are met. Everyone
 on the blockchain can see the terms of the contract and the execution of the contract.
 
-Smart contracts removes centralizedforces and counterparty risk
+Smart contracts removes centralized forces and counterparty risk
 
 The main difference between Ethereum and Bitcoin is that Ethereum has smart contracts which can be used to make applications, legal documents,
 agreements etc whereas in Bitcoin you can only make transactions.
@@ -18,7 +18,7 @@ agreements etc whereas in Bitcoin you can only make transactions.
 An issue with smart contracts is that if we want smart contracts to replace physical agreements in our lives they would need data from the real world.
 This issue is known as the "Oracle Problem". Smart contracts can't directly interact with real world data, they need oracles to do that.
 
-Blockchain Oracles are third part service that interacts with the off-chain world to provide external data or computation to smart contracts.
+Blockchain Oracles are third party service that interacts with the off-chain world to provide external data or computation to smart contracts.
 If we want our blockchain to be fully decentralized then we can't work with a single oracle or a single source which will be running these oracles, to fix
 this we would need a decentralized oracle network similar to our blockchain. Both of these networks would need to be decentralized.
 
