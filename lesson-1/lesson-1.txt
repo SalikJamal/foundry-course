@@ -36,7 +36,7 @@ blockchain agnostic so it'll work on any blockchain out there.
 What is L2 or Layer2?
 
 The basic concept is that blockchains can get massive with the data in it. The basic answer is that we can hook many different blockchains
-into it to solve the scalibility issue. Like Ethereum is a main blockchain and (Arbitrum, Poygon, Optimism) are side chains built on top of
+into it to solve the scalibility issue. Like Ethereum is a main blockchain and (Arbitrum, Polygon, Optimism) are side chains built on top of
 Ethereum. Layer2s solve this scalibility issues.
 
 There are two types of Layer2s:
@@ -49,12 +49,12 @@ There are two types of Layer2s:
 
 Term Web3:
 
-Web1 is permissionless ope sourced web with static contents.
+Web1 is permissionless open sourced web with static contents.
 
 Web2 is the permissioned web, with dynamic content. Where companies run your agreements on their servers.
 
 Web3 is the permissionless web with dynamic content. Where decentralized censorship resistant networks run your agreement and code. It 
-generally is accompanied by the idea of user owned ecosystems, where the protocols you interact with you also own a portion of, instead
+generally is accompanied by the idea of user owned ecosystems, where the protocols you interact with also own a portion of, instead
 of solely being the product.
 
 
@@ -98,7 +98,7 @@ NFTs = Non Fungible Tokens
 What is Gas and transaction fees?
 
 Transactions are run by a group of nodes and their incentive to run these transactions
-is that they get paid a bit of native currency of the blockchain. This incentives people
+is that they get paid a bit of native currency of the blockchain. This incentivizes people
 to run the network. They get paid more, as the more gas the transaction uses.
 
 What is Gas?
@@ -125,7 +125,7 @@ The genesis is block is the first ever block that's created in the blockchain, i
 
 Mining:
 
-The process of finding a "solution" to the blockchain "problem". In this case, the "probelm" was to find a hash
+The process of finding a "solution" to the blockchain "problem". In this case, the "problem" was to find a hash
 that starts with four zeros. Nodes get paid for mining blocks.
 
 A block is a list of transactions mined together, it consists of nonce, transaction and previous hash, and a timestamp.
@@ -138,21 +138,21 @@ account/address.
 
 Signing Transactions:
 
-A private key is only knows to the key holder, its used to sign transactions on the blockchain.
+A private key is only known to the key holder, its used to sign transactions on the blockchain.
 
-Etherum and Bitcoin both use Eliliptic Curve Digital Signature Algorithm (ECDSA) which is a vairant of Digital Signautre Algorithm (DSA) 
+Etherum and Bitcoin both use Elliptic Curve Digital Signature Algorithm (ECDSA) which is a variant of Digital Signature Algorithm (DSA) 
 
-A private key is used to generate a public using the above alogrithm which can be give to anyone to make transactions with.
+A private key is used to generate a public key using the above algorithm which can be given to anyone to make transactions with.
 
 The private key is like a password to digitally sign transactions on the blockchain.
 
-Mneomic phrase or secret phrase combined with account number gives different unique private keys.
+Mnemonic phrase or secret phrase combined with account number gives different unique private keys.
 
 The public key is derived from your private key. Anyone can see it and use it to verify that a transaction came from you.
 
 
 Signing a transaction is a one way process. Someone with a private key signs a transaction by their private key being hashed with their transaction
-data. Anyone can then verify this new transacion hash with your public key.
+data. Anyone can then verify this new transaction hash with your public key.
 
 Private Key > Public Key/Address
 
@@ -193,7 +193,7 @@ until the block usage go less than 50%.
 
 Recap:
 
-Unique teransaction hash that identifes the transacion
+Unique transaction hash that identifes the transaction
 Status and block number of the transaction
 Block confirmation is the number of blocks that have been mined after the block that your transaction was mined in.
 Timestamp of the transaction
@@ -238,11 +238,11 @@ A consensus protocol in a blockchain can be broken down into two pieces:
 
 The mining algorithm or Proof of Work and Proof of Stake are known as the Sybil Resistance mechanism. This is what Bitcoin uses and Ethereum previously used. Currently Proof Of Stake is being used in Ethereum.
 
-Sybil attack is when one user or group of user pretend to be many users.
+Sybil attack is when one user or group of user pretend to be many different users.
 
-Chain Selection rules is used to decide which chain is the correct chain. Bit coin uses the longest chain rules which means that whichever blockchain is the longest will be the one
+Chain Selection rules is used to decide which chain is the correct chain. Bitcoin uses the longest chain rule which means that whichever blockchain is the longest will be the one
 that rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty. Ethereum used 
-to use the longest chain rule too; however, now that Ethereum runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated 
+to have the longest chain rule too; however, now that Ethereum runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated 
 sum of validator votes, weighted by validator staked-ether balances.
 
 In proof of work, the nodes goes through computational work to find a nonce that will make the hash of the block start with a certain number of zeros. This is how the nodes agree on the next block to be added to the blockchain.
@@ -283,7 +283,7 @@ Sybil attack is when user creates many psudo anonymous identities to gain contro
 
 51% attack is when a user or group of users gain control of 51% of the network. This is why proof of work and proof of stake are sybil resistant. 
 51% attack has happened on Eth classic blockchain in the past. This is why the bigger a blockchain becomes the more decentralized it becomes.
-
+`
 There are also terms Layer 1 and Layer 2 in the blockchain world.
 
 Layer 1 are base layer blockchain implementations like Bitcoin, Etherem and Avalanche.
