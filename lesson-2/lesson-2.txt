@@ -1,1 +1,15 @@
-Notes from Lesson 2 Solidity:
+Notes from Lesson 2 Simple Storage:
+
+Remix Intro:
+
+Always define version on top of your contract file because it is important to know specifiy version of solidity you are using.
+
+Write comments in code to refer and understand it later on.
+
+To use range of solidity version for your contract define it like:
+
+pragma soldity >= 0.8.0 < 0.9.0;
+
+Always define SPDX License identifier so it simplies licensing code later on.
+
+To create contract use the keyword "contract" which is very similar to classes in JavaScript.
