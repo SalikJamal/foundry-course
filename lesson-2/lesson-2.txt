@@ -13,3 +13,18 @@ pragma soldity >= 0.8.0 < 0.9.0;
 Always define SPDX License identifier so it simplies licensing code later on.
 
 To create contract use the keyword "contract" which is very similar to classes in JavaScript.
+
+Basic solidity data types, if not initialized they will be set to their default values.
+
+boolean, (true/false) (default = false)
+uint, (positive whole number) (default = 0)
+int, (signed whole number, positive or negative) (default = 0)
+address, (ethereum address) (default = 0x000000000000000)
+bytes (bytes is a lower level type) (default = 0x00)
+
+
+bit and bytes are units to measure computer data
+bytes consist of 8 bits
+bits are just 1 and 0'
+big B is for bytes
+small b is for bits
