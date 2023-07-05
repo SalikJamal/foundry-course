@@ -28,3 +28,61 @@ bytes consist of 8 bits
 bits are just 1 and 0'
 big B is for bytes
 small b is for bits
+
+
+Solidity function/methods:
+
+Functions or methods are very specific or small piece of code to reuse in the application.
+Arguments in function should have a different name than state variables to differentiate.
+
+Similar to our addresses our smart contracts have their own addresses and wallet as well.
+
+Any modifications on the blockchain our done executing transactions.
+
+Default visibility of state variables is internal.
+
+State variables visibility:
+
+public:
+Public state variables differ from internal ones only in that the compiler automatically generates getter 
+functions for them, which allows other contracts to read their values. When used within the same contract, 
+the external access (e.g. this.x) invokes the getter while internal access (e.g. x) gets the variable value directly from storage.
+Setter functions are not generated so other contracts cannot directly modify their values.
+
+internal:
+Internal state variables can only be accessed from within the contract they are defined in and in derived contracts. 
+They cannot be accessed externally. This is the default visibility level for state variables.
+
+private:
+Private state variables are like internal ones but they are not visible in derived contracts.
+
+
+Function Visibility:
+
+external:
+External functions are part of the contract interface, which means they can be called from other contracts and via transactions. 
+An external function f cannot be called internally (i.e. f() does not work, but this.f() works).
+
+public:
+Public functions are part of the contract interface and can be either called internally or via message calls.
+
+internal:
+Internal functions can only be accessed from within the current contract or contracts deriving from it. They cannot be accessed externally. 
+Since they are not exposed to the outside through the contract’s ABI, they can take parameters of internal types like mappings or storage references.
+
+private:
+Private functions are like internal ones but they are not visible in derived contracts.
+
+Making something private or internal only prevents other contracts from reading or modifying the information, 
+but it will still be visible to the whole world outside of the blockchain.
+
+Solidity has some functions that don't have to create a transaction to call them, these functions have the modifier "view or pure" in it. But calling
+a view or pure function does cost gas only when a gas cost transaction is calling it.
+
+
+A function marked "view" means we're going to read state from the blockchain.
+A function market "pure" means we're going to neither read or modify the state.
+
+State variables are also knowns as storage variables.
+
+The "return" keyword specifies what the function will return.
