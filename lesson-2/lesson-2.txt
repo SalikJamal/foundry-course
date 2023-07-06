@@ -98,3 +98,25 @@ Errors & Warnings:
 
 Warnings are just warnings, they won't prevent you from deploying, but its good measure to always get rid of all warnings. Warnings are in yellow.
 Errors on the other hand will not let you deploy until are resolved. Errors are in red.
+
+Memory, Storage & Calldata:
+
+Inside of functions most variables default to memory variables.
+
+
+Evm manages information in six places:
+
+Memory: Memory is the place where the variable exists for the duration of function call only. Memory keyword needs to be specified for mappings, structs and arrays. Strings are also an array of bytes.
+
+Storage: Storage are permanent variables that can be modified. All variables outside functions are storage variables in the contract.
+
+Calldata: Similar to Memory, and both are temporary variables.
+
+Code
+
+Logs
+
+Stack
+
+
+Difference between calldata and memory is that memory variable can be manipulated, reassigned but calldata cannot be modified or resigned.

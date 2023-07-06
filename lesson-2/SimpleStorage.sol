@@ -25,7 +25,8 @@ contract SimpleStorage {
         return myFavoriteNumber;
     }
 
-    function addPerson(uint256 _favoriteNumber, string memory _name) public {
+    // Calldata, memory, storage
+    function addPerson(uint256 _favoriteNumber, string calldata _name) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
     }
 
