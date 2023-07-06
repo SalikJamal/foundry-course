@@ -86,3 +86,10 @@ A function market "pure" means we're going to neither read or modify the state.
 State variables are also knowns as storage variables.
 
 The "return" keyword specifies what the function will return.
+
+Arrays & Structs:
+
+Arrays which don't have a fixed length are called dynamic Arrays
+
+uint256[4] staticArray = [0, 1, 2, 3]; // Static Array
+uint256[] dynamicArray = []; // Dynamic Array
