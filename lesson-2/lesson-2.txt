@@ -93,3 +93,8 @@ Arrays which don't have a fixed length are called dynamic Arrays
 
 uint256[4] staticArray = [0, 1, 2, 3]; // Static Array
 uint256[] dynamicArray = []; // Dynamic Array
+
+Errors & Warnings:
+
+Warnings are just warnings, they won't prevent you from deploying, but its good measure to always get rid of all warnings. Warnings are in yellow.
+Errors on the other hand will not let you deploy until are resolved. Errors are in red.
