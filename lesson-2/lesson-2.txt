@@ -107,10 +107,12 @@ Inside of functions most variables default to memory variables.
 Evm manages information in six places:
 
 Memory: Memory is the place where the variable exists for the duration of function call only. Memory keyword needs to be specified for mappings, structs and arrays. Strings are also an array of bytes.
+Difference between calldata and memory is that memory variable can be manipulated, reassigned but calldata cannot be modified or resigned.
+
+Calldata: Similar to Memory, cannot be reassigned or modified and both are temporary variables.
+
 
 Storage: Storage are permanent variables that can be modified. All variables outside functions are storage variables in the contract.
-
-Calldata: Similar to Memory, and both are temporary variables.
 
 Code
 
@@ -118,5 +120,6 @@ Logs
 
 Stack
 
+Mappings:
 
-Difference between calldata and memory is that memory variable can be manipulated, reassigned but calldata cannot be modified or resigned.
+Mappings are key value pairs, where the key will always point its value. The keys should always be unique. Default values for all the keys in mappings is the default value for that data type.
