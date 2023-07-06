@@ -121,5 +121,11 @@ Logs
 Stack
 
 Mappings:
-
 Mappings are key value pairs, where the key will always point its value. The keys should always be unique. Default values for all the keys in mappings is the default value for that data type.
+
+Deploying your contract:
+
+1. Inject Metamask in the environment and connect your account.
+2. Select the appropriate network.
+3. Click on the deploy button on the deploy and run transactions tab.
+4. Use the methods which'll popup metamask if the method is modifying the blockchain.
