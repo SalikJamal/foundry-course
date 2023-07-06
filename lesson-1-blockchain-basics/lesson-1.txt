@@ -302,3 +302,6 @@ Consensus is the mechanism that allows the blockchain to agree on what the state
 Sharding and rollups are solutions to scalibility issues on layer 1s
 A layer 1 is a base blockchain implementations
 The scalibility problem is that there's not always enough block space for amount of transaction in them which leads to high gas prices
+
+
+Lesson 1 Challenge Contract: https://sepolia.etherscan.io/address/0x25056312685339b49e1d1C5a0b72Ff9eff13AF77#code

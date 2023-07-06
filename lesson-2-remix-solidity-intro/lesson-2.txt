@@ -153,3 +153,5 @@ Functions that modify the state of blockchain will cost gas and will register a 
 Functions that don't modify the state will not initiate a transaction.
 We can specify different data locations for our functions, like calldata and memory.
 When we compile our contract it compiles our code to EVM compatible Opcodes, byte code.
+
+Lesson 2 Challenge Contract: https://sepolia.etherscan.io/address/0x5c1ddb86F11BB46D3067C702AC554aEaED9ff8f0#code
