@@ -129,3 +129,27 @@ Deploying your contract:
 2. Select the appropriate network.
 3. Click on the deploy button on the deploy and run transactions tab.
 4. Use the methods which'll popup metamask if the method is modifying the blockchain.
+
+Contract deployed on Sepolia Testnet, contract address: 0x9a6774007373279050aC35B83EBf35d11811fd64
+
+Lesson 2 Recap:
+
+EVM (Ethereum Virtual Machine), your contract is compiled into opcodes which the EVM checks and runs your code with.
+Some EVM compatible blockchain and L2s are:
+
+Ethereum
+Polygon
+Arbitrum
+Optimism
+zkSync
+etc
+
+
+Always first write the solidity version
+Then SPDX license identifier, mostly MIT
+Then name your contract,
+Define your datatype and variables, like uint, mapping, strings, arrays, structs etc.
+Functions that modify the state of blockchain will cost gas and will register a transaction.
+Functions that don't modify the state will not initiate a transaction.
+We can specify different data locations for our functions, like calldata and memory.
+When we compile our contract it compiles our code to EVM compatible Opcodes, byte code.
