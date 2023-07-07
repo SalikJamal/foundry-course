@@ -111,7 +111,6 @@ Difference between calldata and memory is that memory variable can be manipulate
 
 Calldata: Similar to Memory, cannot be reassigned or modified and both are temporary variables.
 
-
 Storage: Storage are permanent variables that can be modified. All variables outside functions are storage variables in the contract.
 
 Code
