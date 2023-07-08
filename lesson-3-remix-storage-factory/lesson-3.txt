@@ -2,3 +2,10 @@ Notes from Lesson 3 Storage Factory:
 
 The ability for smart contracts to interact with each other seamlessly is knows as composibility. Smart contracts are composible beacuse they can't easily
 interact with each other.
+
+The way to define any varibles is
+
+    Dataype visbility name;
+eg: uint256 public favoriteNumber;
+
+Solidity is case sensitive.
