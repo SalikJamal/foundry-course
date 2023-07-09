@@ -20,4 +20,3 @@ import { SimpleStorage } from "./SimpleStorage.sol"; // Named imports (Better ve
 import "./SimpleStorage.sol"; // Normal imports 
 
 named imports should always be the convention
-
