@@ -30,3 +30,28 @@ ABI will tell our code how it can interact with our contract.
 
 Since we're using instances of SimpleStorage contracts we, have both the addresses and the ABIs that we can use to fire the 
 store and retrieve functions in every single contract.
+
+Inheritance:
+
+Inheriting contracts lets you use all of the contracts variables and functions in the contract which inherits, for example if contract A inherits contract B, then 
+contract A will have all functions/variables of contract B. The syntax for inheritance is:
+
+Contract A is B {}
+
+Now if you want to change something in contract B when it is inherited by A, you can do something called overriding.
+
+There are two keywords which you should know for overriding:
+
+Virtual
+Override
+
+When overriding a function you add the "override" modifier in its signature. 
+And to make a function overridable you need to add the "virtual" modifier in its signature.
+
+A function signature is the name, parameters, modifiers of a function. Eg:
+
+function store(uin256 _number) public pure returns(uint256) {
+    return _number;
+}
+
+"function store(uin256 _number) public pure returns(uint256)" This is the function signature.
