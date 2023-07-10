@@ -20,3 +20,13 @@ import { SimpleStorage } from "./SimpleStorage.sol"; // Named imports (Better ve
 import "./SimpleStorage.sol"; // Normal imports 
 
 named imports should always be the convention
+
+To interact with a contract, you'll always need two things:
+
+1. The contract address
+2. The contract ABI (Application Binary Interface)
+
+ABI will tell our code how it can interact with our contract.
+
+Since we're using instances of SimpleStorage contracts we, have both the addresses and the ABIs that we can use to fire the 
+store and retrieve functions in every single contract.
