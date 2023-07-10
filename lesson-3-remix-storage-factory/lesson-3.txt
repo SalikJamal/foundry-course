@@ -55,3 +55,15 @@ function store(uin256 _number) public pure returns(uint256) {
 }
 
 "function store(uin256 _number) public pure returns(uint256)" This is the function signature.
+
+
+RECAP:
+
+Using new keyword you deploy contracts from other contracts using code.
+We can import contracts which is same as copy pasting code from the contract.
+We can use named imports to specify exactly which contract we want to import.
+We can interact with other smart contracts, if we have the address and the ABI.
+If we want to make a contract inherit the properties/attributes of a contract then we can use the "is" keyword
+in its contract declaration.
+To override a function use the "override" modifier in the signature.
+To make a function overridable use the "virtual" modifier in the signature.
