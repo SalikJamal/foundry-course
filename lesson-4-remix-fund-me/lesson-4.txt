@@ -1,1 +1,8 @@
 Notes from Lesson 4 Remix Fund Me:
+
+What are we making?
+
+We're making a crowd funding app like kickstart, or a way to raise money.
+Allowing users to send EVM based coin and allow owner of the contract to withdraw funds to spend on their project.
+We're gonna deploy on testnet.
+A minimum funding amount will be set to $5.
