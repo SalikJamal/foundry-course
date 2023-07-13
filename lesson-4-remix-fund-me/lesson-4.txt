@@ -6,3 +6,9 @@ We're making a crowd funding app like kickstart, or a way to raise money.
 Allowing users to send EVM based coin and allow owner of the contract to withdraw funds to spend on their project.
 We're gonna deploy on testnet.
 A minimum funding amount will be set to $5.
+
+To allow a smart contract to receive Ether or native cryptocurrency, we need to add the "payable" modifier in function signature.
+Just like wallets, contracts can also hold coins.
+You can access the value sent to the function with "msg.value" where value is the amount sent.
+
+Use the require function to put checks in the function. If it passes it'll continue otherwise it'll revert the transaction.
