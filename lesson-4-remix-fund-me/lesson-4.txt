@@ -12,3 +12,17 @@ Just like wallets, contracts can also hold coins.
 You can access the value sent to the function with "msg.value" where value is the amount sent.
 
 Use the require function to put checks in the function. If it passes it'll continue otherwise it'll revert the transaction.
+
+What is a revert?
+A revert undos any action that have been done, and sends the remaining gas back.
+If you send a failed transaction, you will still spend gas but it'll revert everything back and return the remaining gas back.
+
+Every single transaction you send will have following fields:
+
+1. Nonce: tx count for the account
+2. Gas Price: price per unit of gas(in wei)
+3. Gas limit: max gas that this tx can use
+4. To: address that the tx is sent to
+5. value: amount of wei to send
+6. Data: what to send to the "To" address
+7. v, r, s: components of tx signature
