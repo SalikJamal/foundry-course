@@ -26,3 +26,20 @@ Every single transaction you send will have following fields:
 5. value: amount of wei to send
 6. Data: what to send to the "To" address
 7. v, r, s: components of tx signature
+
+How to convert a dollar value to the equivalent of ether in order to make the minimum amount check.
+We'll be using decentralized oracles for this, chainlink.
+
+
+The smart contract connectivity problem or the oracle problem is that smart contracts can not see or compute with external/outside data.
+because if smart contracts had different values per computation, like an API call, or a random number, or 1 + 1 for a variable then they 
+will never reach consensus that's why we rely on oracles to bring in external data to the smart contracts.
+
+Centralized oracles are a point of failure, because they're not decentralized. We don't need our data from centralized nodes.
+Chainlink has decentralized oracles network which is awesome for this thing.
+
+Blockchains can't do API calls
+
+Chainlink networks can be completely customized to bring any data or any computation that we want.
+
+Chainlink data feeds are powering over $50 billion in Defi World
