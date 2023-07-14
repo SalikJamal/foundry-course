@@ -41,5 +41,5 @@ Chainlink has decentralized oracles network which is awesome for this thing.
 Blockchains can't do API calls
 
 Chainlink networks can be completely customized to bring any data or any computation that we want.
-
+Chainlink is a technology to get external data and computation into our smart contracts, and getting that data in a decentralized manner.
 Chainlink data feeds are powering over $50 billion in Defi World
