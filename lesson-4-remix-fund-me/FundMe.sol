@@ -1,7 +1,3 @@
-// Get funds from users into this contract
-// Withdraw funds to the owner of this contract
-// Set a minimum funding value in USD
-
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.18;
@@ -19,4 +15,15 @@ contract FundMe {
 
     // function withdraw() public {}
 
+    function getPrice() public {
+        // Addr 0x694AA1769357215DE4FAC081bf1f309aDC325306
+        // ABI
+    }
+
+    function getConversionRate() public {}
+
 }
+
+// Get funds from users into this contract
+// Withdraw funds to the owner of this contract
+// Set a minimum funding value in USD

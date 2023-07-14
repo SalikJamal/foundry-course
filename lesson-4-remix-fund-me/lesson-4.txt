@@ -43,3 +43,8 @@ Blockchains can't do API calls
 Chainlink networks can be completely customized to bring any data or any computation that we want.
 Chainlink is a technology to get external data and computation into our smart contracts, and getting that data in a decentralized manner.
 Chainlink data feeds are powering over $50 billion in Defi World
+
+Interfaces:
+
+Interfaces are contracts which only has function signatures in it. It doesn't have a constructor neither any state variables.
+Interfaces are used to standardize different smart contracts for interoperability. 
