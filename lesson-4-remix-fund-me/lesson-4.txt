@@ -48,3 +48,12 @@ Interfaces:
 
 Interfaces are contracts which only has function signatures in it. It doesn't have a constructor neither any state variables.
 Interfaces are used to standardize different smart contracts for interoperability. 
+Even though the interface itself doesn't have any logic, when a contract implements that interface, 
+it provides the implementation details and return values for the functions defined in the interface.
+
+Interfaces act as a way to enforce a contract's adherence to a specific set of functions, enabling contracts 
+to interact in a standardized manner. By implementing the interface, the contract guarantees the presence of
+those functions, allowing other contracts or external code to utilize the contract's functionality through 
+the interface without needing knowledge of the specific implementation details.
+
+How to import directly from github/npm:
