@@ -7,12 +7,12 @@ import { AggregatorV3Interface } from "@chainlink/contracts/src/v0.8/interfaces/
 
 contract FundMe {
 
-    uint256 public minimumUsd = 5;
+    uint256 public minimumUsd = 5e18;
 
     function fund() public payable {
         // Allow users to send $
         // Have a minimum $5 sent
-        require(msg.value >= minimumUsd, "Didn't sent enough ETH"); // 1e18 = 1 ETH
+        require(getConversionRate(msg.value) >= minimumUsd, "Didn't sent enough ETH"); // 1e18 = 1 ETH
     }
 
     // function withdraw() public {}
@@ -20,12 +20,14 @@ contract FundMe {
     function getPrice() public view returns(uint256)  {
         AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
         (, int256 price, , , ) = priceFeed.latestRoundData();
-        // Price of ETH in terms of USD
-        // 2000.00000000 Example value
         return uint256(price * 1e10);
     }
 
-    function getConversionRate() public {}
+    function getConversionRate(uint256 _ethAmount) public view returns(uint256) {
+        uint256 ethPrice = getPrice();
+        uint256 ethAmountInUsd = (ethPrice * _ethAmount) / 1e18;
+        return ethAmountInUsd;
+    }
 
     function getVersion() public view returns(uint256) {
         return AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306).version();

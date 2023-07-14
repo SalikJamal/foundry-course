@@ -56,4 +56,12 @@ to interact in a standardized manner. By implementing the interface, the contrac
 those functions, allowing other contracts or external code to utilize the contract's functionality through 
 the interface without needing knowledge of the specific implementation details.
 
-How to import directly from github/npm:
+You can typecast variables by wrapping variables into parenthesis of the variable type, eg:
+
+uint256 price = 10;
+typecast to int256
+int256(price);
+
+Always multiply before dividing because only whole numbers work in solidity.
+
+"Gas estimation failed" error generally means something is wrong in the code.
