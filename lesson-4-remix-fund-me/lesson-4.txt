@@ -65,3 +65,10 @@ int256(price);
 Always multiply before dividing because only whole numbers work in solidity.
 
 "Gas estimation failed" error generally means something is wrong in the code.
+
+msg.sender refers to whoever calls the function.
+msg.value refers to the amount of Ether send with the transaction, which is not the gas fees it is irrespective of the gas fees.
+
+You can add labels to mapping like this, to make it easier to understand the mapping.
+
+mapping(address To => uint256 amountSent)
