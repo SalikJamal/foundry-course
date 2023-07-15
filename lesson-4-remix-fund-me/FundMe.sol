@@ -21,13 +21,17 @@ contract FundMe {
     }
 
     function withdraw() public {
+
         for(uint funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
         }
 
-        funders = new address[](0);
-        // funders = a brand new array with data type address with value to be 0 addresses
+        // reset the array
+        funders = new address[](0); // A brand new array with data type address with value to be 0 addresses
+        (bool callSuccess, ) = payable(msg.sender).call{ value: address(this).balance }("");
+        require(callSuccess, "Call Failed");
+
     }
  
 }

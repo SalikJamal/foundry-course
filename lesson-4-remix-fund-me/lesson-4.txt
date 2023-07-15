@@ -142,3 +142,40 @@ maximum value in its range, rather than -1. This is an underflow for uint256.
 - 0x000000000000000000000000000000000001
 ----------------------------------------------------
 = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+
+How to send Ether or a native blockchain currency:
+
+Three ways to do this:
+
+1. Transfer
+
+msg.sender is an address
+payable msg.sender is an address that can transfer currency
+
+payable(msg.sender).transfer(address(this).balance);
+
+address(this) refers to the address of the contract
+.balance functions returns balance of the contract
+
+usually transfer cost 2100 gas, but our transfer function is capped at 2300, and if in case it goes above 2300 gas it'll throw error and rever the transaction.
+
+2. Send
+
+bool sendSuccess = payable(msg.sender).send(address(this).balance);
+require(sendSuccess, "Send Failed");
+
+send is also capped at 2300 gas and it'll return a boolean for success or fail sending of ether, and will not revert until you do a requre statement.
+
+
+3. Call
+
+(bool callSuccess, bytes dataReturned) = payable(msg.sender).call{value: address(this).balance}("")
+require(callSuccess, "Call Failed");
+
+call will also not revert on itself in case of any issue until you do a require statment yourself based on the boolean it returns.
+It also returns data which you can use when calling different methods using the call function.
+
+The paranthesis after call "("")" specifies we are not calling any function in case of sending ether.
+
+call with re-entrancy guard is the recommended way to use.
