@@ -81,3 +81,26 @@ Chainlink price feeds are an easy way to get pricing data from the real world in
 In EVM, decimals don't work so always remember to use correct number of units.
 msg.value, and msg.sender are global variables. value is the amount of wei sent with the transaction, and sender is the address which
 initiated the transaction.
+
+
+What is a library in solidity?
+
+Library is a type of contract which let's you reuse code but you can't declare state variables and you can't send ether.
+Library is embedded into the contract if all library functions are internal, otherwise the library must be deployed and 
+then linked before contract is deployed.
+
+libraries don't have state variable and all functions are marked internal.
+You import libraries same as any contract.
+You declare libraries using "library" keyword instead of the contract keyword.
+
+To bind functions from a library to a specific datatype do the following, eg: uint256
+
+using PriceConverter for uint256;
+        library ↑     datatype ↑
+
+When you bind libraries to datatype like above you can use them like this:
+
+msg.value.getPrice();
+library function ↑
+
+The msg.value is the first parameter of that function, in case of 2 parameter, the second parameter will then go in the paranthesis.
