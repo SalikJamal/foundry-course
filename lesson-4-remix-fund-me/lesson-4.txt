@@ -104,3 +104,41 @@ msg.value.getPrice();
 library function ↑
 
 The msg.value is the first parameter of that function, in case of 2 parameter, the second parameter will then go in the paranthesis.
+
+
+SafeMath library??
+
+Before version 0.8 of solidity, safeMath was used in almost all of the contracts, but now not anymore.
+Before version 0.8 you could overflow the max limit of a uint which would reset it to lowest value again.
+This would result in loss of data, so the safeMath library was used to check if any arithmetic operation is overflowing or underflowing
+a variable and would throw error to prevent loss of data.
+
+After version 0.8, solidity does everything that safeMath library does but about of the box, so no need for additional
+libraries.
+
+You can use the "unchecked" keyword to disable checks for underflowing and overflowing in versions later than 0.8.
+Using the "unchecked" keyword can allow for gas optimization, but only use it if you're 1000% sure the variable will not undeflow or overflow.
+
+Integer Overflow:
+
+In simple terms, overflow occurs when an unsigned integer (uint) reaches its maximum value. After that, any value added 
+to it will then rotate the value from the beginning of its range. 
+
+Let's say we have an uint256 variable, which can only hold values in the range [0, 2^256 - 1].
+
+The result would be the lowest value in this uint256 range, which is 0, if you increase the highest number in this range by 1. This is an overflow.
+
+0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
++ 0x000000000000000000000000000000000001
+-----------------------------------------
+= 0x000000000000000000000000000000000000
+
+Integer Underflow:
+
+Since unsigned integers cannot support signed (negative) numbers, subtracting 1 from its lowest value 0 would result in the
+maximum value in its range, rather than -1. This is an underflow for uint256.
+
+ 0x000000000000000000000000000000000000
+- 0x000000000000000000000000000000000001
+----------------------------------------------------
+= 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
