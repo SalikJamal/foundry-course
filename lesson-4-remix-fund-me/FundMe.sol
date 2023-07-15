@@ -25,8 +25,11 @@ contract FundMe {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
         }
-    }
 
+        funders = new address[](0);
+        // funders = a brand new array with data type address with value to be 0 addresses
+    }
+ 
 }
 
 // Get funds from users into this contract
