@@ -17,12 +17,14 @@ contract FundMe {
 
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
+    error NotOwner();
+
     constructor() {
         i_owner = msg.sender;
     }
 
     modifier onlyOwner {
-        require(msg.sender == i_owner, "Sender is not the owner!");
+        if(msg.sender != i_owner) { revert NotOwner(); }
         _;
     }
 

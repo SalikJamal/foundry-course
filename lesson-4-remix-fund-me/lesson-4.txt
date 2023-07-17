@@ -238,3 +238,9 @@ immutables variables are variables that don't need to be defined as they're decl
 use immutable keyword for these type of variables.
 
 convetion for naming immutable variables is i_variableName, like i_owner;
+
+Custom errors??
+
+custom errors save gas instead of the entire string which is saved in storage.
+its an if statment instead of require.
+
