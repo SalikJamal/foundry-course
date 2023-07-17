@@ -227,3 +227,14 @@ modifier onlyOwner {
     _;
 }
 
+Immutables & Constants??
+
+constant variables shoud be declared and defined at compile time. There value cannot be changed once defined.
+constant variables should be named all caps as per convention.
+
+always use constants for variables that will not be changed once deployed the contract, a gas efficient method.
+
+immutables variables are variables that don't need to be defined as they're declared, they can be defined later like in the constructor for owner address.
+use immutable keyword for these type of variables.
+
+convetion for naming immutable variables is i_variableName, like i_owner;

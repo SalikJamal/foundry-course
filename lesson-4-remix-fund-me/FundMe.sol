@@ -9,30 +9,30 @@ contract FundMe {
 
     using PriceConverter for uint256;
     
-    uint256 public minimumUsd = 5e18;
+    uint256 public constant MIN_USD = 5e18;
     
     address[] public funders;
-    address public owner;
+
+    address public immutable i_owner;
 
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
     constructor() {
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
     modifier onlyOwner {
-        require(msg.sender == owner, "Sender is not the owner!");
+        require(msg.sender == i_owner, "Sender is not the owner!");
         _;
     }
 
     function fund() public payable onlyOwner {
-        require(msg.value.getConversionRate() >= minimumUsd, "Didn't sent enough ETH"); // 1e18 = 1 ETH
+        require(msg.value.getConversionRate() >= MIN_USD, "Didn't sent enough ETH"); // 1e18 = 1 ETH
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
     function withdraw() public onlyOwner {
-        require(msg.sender == owner, "Must be owner");
 
         for(uint funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
