@@ -8,19 +8,31 @@ import { PriceConverter } from "./PriceConverter.sol";
 contract FundMe {
 
     using PriceConverter for uint256;
+    
     uint256 public minimumUsd = 5e18;
     
     address[] public funders;
+    address public owner;
+
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
+    constructor() {
+        owner = msg.sender;
+    }
 
-    function fund() public payable {
+    modifier onlyOwner {
+        require(msg.sender == owner, "Sender is not the owner!");
+        _;
+    }
+
+    function fund() public payable onlyOwner {
         require(msg.value.getConversionRate() >= minimumUsd, "Didn't sent enough ETH"); // 1e18 = 1 ETH
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public onlyOwner {
+        require(msg.sender == owner, "Must be owner");
 
         for(uint funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];

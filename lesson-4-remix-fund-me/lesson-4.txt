@@ -207,3 +207,22 @@ receive() exists?  fallback()
         return address(this).balance;
     }
 }
+
+
+Constructors??
+
+Constructors are functions which are run when the contract is deployed. They will operate all the computation at the time of deployment of the contract.
+
+
+Modifiers??
+
+Modifiers are function modifier which can be created once and utilized in many places. They run a check, which you put, if it the check is true it executes the function
+otherwise it reverts the transaction.
+
+The _ defines the execution sequence in function if it is first in modifier, then the function code will run first then the modifier, if it is bottom in modifier.
+Then the modifier will run and if its true then the function will run.
+
+modifier onlyOwner {
+    require(msg.sender == owner, "Sender is not the owner!");
+    _;
+}
