@@ -273,3 +273,11 @@ receive() exists?  fallback()
         return address(this).balance;
     }
 }
+
+Lesson 4 RECAP:
+
+- Solidity has two special functions receive, fallback & constructors.
+- If data is sent but no function specified then fallback(), if no data then receive()
+- Constant & immutable are variables that can save us gas.
+- Constants are variables that are declared and defined at compile time and never changed again.
+- immutables are variables which can be declared and defined in the constructor once.
