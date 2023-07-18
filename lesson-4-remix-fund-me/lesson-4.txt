@@ -180,35 +180,6 @@ The paranthesis after call "("")" specifies we are not calling any function in c
 
 call with re-entrancy guard is the recommended way to use.
 
-contract ReceiveEther {
-    /*
-    Which function is called, fallback() or receive()?
-
-           send Ether
-               |
-         msg.data is empty?
-              / \
-            yes  no
-            /     \
-receive() exists?  fallback()
-         /   \
-        yes   no
-        /      \
-    receive()   fallback()
-    */
-
-    // Function to receive Ether. msg.data must be empty
-    receive() external payable {}
-
-    // Fallback function is called when msg.data is not empty
-    fallback() external payable {}
-
-    function getBalance() public view returns (uint) {
-        return address(this).balance;
-    }
-}
-
-
 Constructors??
 
 Constructors are functions which are run when the contract is deployed. They will operate all the computation at the time of deployment of the contract.
@@ -244,3 +215,61 @@ Custom errors??
 custom errors save gas instead of the entire string which is saved in storage.
 its an if statment instead of require.
 
+Receive and Fallback??
+
+What happens if someone send ether to the contract without calling the appropriate function?
+
+Whenever we send ethereum or make a transaction to a contract as long as there's no data associated with that transaction, then the receive function
+will get called.
+
+Receive function:
+A contract can have at most one receive function, declared using receive() external payable { ... } 
+(without the function keyword). This function cannot have arguments, cannot return anything and must 
+have external visibility and payable state mutability. It can be virtual, can override and can have modifiers.
+
+The receive function is executed on a call to the contract with empty calldata. This is the function that is executed
+on plain Ether transfers (e.g. via .send() or .transfer()). If no such function exists, but a payable fallback function
+exists, the fallback function will be called on a plain Ether transfer. If neither a receive Ether nor a payable 
+fallback function is present, the contract cannot receive Ether through a transaction that does not represent a 
+payable function call and throws an exception.
+
+Receive function always have empty call data.
+
+Fallback function:
+A contract can have at most one fallback function, declared using either fallback () external [payable] 
+or fallback (bytes calldata input) external [payable] returns (bytes memory output) (both without the function keyword). 
+This function must have external visibility. A fallback function can be virtual, can override and can have modifiers.
+
+The fallback function is executed on a call to the contract if none of the other functions match the given function signature, 
+or if no data was supplied at all and there is no receive Ether function. The fallback function always receives data,
+but in order to also receive Ether it must be marked payable.
+
+fallback function can also work even if calldata is send with the transaction.
+
+contract ReceiveEther {
+    /*
+    Which function is called, fallback() or receive()?
+
+           send Ether
+               |
+         msg.data is empty?
+              / \
+            yes  no
+            /     \
+receive() exists?  fallback()
+         /   \
+        yes   no
+        /      \
+    receive()   fallback()
+    */
+
+    // Function to receive Ether. msg.data must be empty
+    receive() external payable {}
+
+    // Fallback function is called when msg.data is not empty
+    fallback() external payable {}
+
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
+    }
+}

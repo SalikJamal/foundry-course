@@ -28,6 +28,14 @@ contract FundMe {
         _;
     }
 
+    receive() external payable {
+        fund();
+    }
+
+    fallback() external payable {
+        fund();
+    }
+
     function fund() public payable onlyOwner {
         require(msg.value.getConversionRate() >= MIN_USD, "Didn't sent enough ETH"); // 1e18 = 1 ETH
         funders.push(msg.sender);
