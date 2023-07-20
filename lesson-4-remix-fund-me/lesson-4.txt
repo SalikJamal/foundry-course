@@ -274,6 +274,15 @@ receive() exists?  fallback()
     }
 }
 
+Ether Units:
+
+A literal number can take a suffix of wei, gwei or ether to specify a subdenomination of Ether, 
+where Ether numbers without a postfix are assumed to be Wei.
+
+assert(1 wei == 1); // 1 wei is equal to 1
+assert(1 gwei == 1e9); // 1000000000
+assert(1 ether == 1e18); // 1000000000000000000
+
 Lesson 4 RECAP:
 
 - Solidity has two special functions receive, fallback & constructors.
