@@ -68,4 +68,4 @@ in its contract declaration.
 To override a function use the "override" modifier in the signature.
 To make a function overridable use the "virtual" modifier in the signature.
 
-Lesson 2 Challenge Contract: https://sepolia.etherscan.io/address/0x4A62A8901e6113dEF0AEeEC77E531779cd40da73#code
+Lesson 3 Challenge Contract: https://sepolia.etherscan.io/address/0x4A62A8901e6113dEF0AEeEC77E531779cd40da73#code

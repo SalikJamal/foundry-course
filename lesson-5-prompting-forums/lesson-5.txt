@@ -1,0 +1,28 @@
+Notes from Lesson 5 AI prompting & forums:
+
+seven steps to getting out of any errors in your programming journey:
+
+1. Tinker:
+pinpoint your error 
+
+2. Ask your AI:
+Use chatGPT, Phind, Bard to ask your AI for help, write clear and specific instructions, give as much context
+as possible, use delimeters to clearly indicate distinct parts of the input, look out for hallucinations.
+Understand the limitations of your AI, and interact with them as your having a conversation. AND ITERATE!
+
+Hallucinations are completely wrong answers given by the AI.
+
+
+3. Read the docs
+Read the docs for your issue, clearly and with good focus, almost always the docs have the right answers.
+
+4. Web search
+Do a web search on google to find people having similar issues and how they solved them.
+
+5. Ask in a forum
+Use stackoverflow, ethereum stackexchange and reddit forums to ask a question about your issue. 
+
+6. Ask on support forum or github
+Ask on the support forum or github for the specific tool you are using.
+
+7. Iterate
