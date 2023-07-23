@@ -3,7 +3,8 @@ Notes from Lesson 5 AI prompting & forums:
 7 steps to getting out of any errors in your programming journey:
 
 1. Tinker:
-pinpoint your error 
+pinpoint your error, find the exact error, reason of the issue you're having. If you don't understand try pasting the error
+message in google.
 
 2. Ask your AI:
 Use chatGPT, Phind, Bard to ask your AI for help, write clear and specific instructions, give as much context
