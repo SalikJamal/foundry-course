@@ -54,3 +54,8 @@ How to format a question, the right way:
             }
         }
         ```
+
+
+More ethereum resources to learn from after the course:
+
+https://speedrunethereum.com/
