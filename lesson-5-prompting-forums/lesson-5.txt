@@ -37,3 +37,20 @@ Ask on the support forum or github for the specific tool you are using.
 4. Google the exact error if AI doesn't know, the forums doesn't know.
 5. Post your questions in forums.
 6. Posting an issue on github.
+
+How to format a question, the right way:
+
+1. Copy the exact error you're having, give the context
+2. Put the code in code blocks
+3. Pin point the issue further in your explanation
+4. Also only put the code that is relevant to the issue/error.
+5. Use code highlighting for your proper language. 
+    eg: ```solidity|python|javascript|etc
+        pragma solidty ^0.8.18;
+
+        contract MyContract {
+            function myFunction() public pure returns (string memory) {
+                return "Hello, World!";
+            }
+        }
+        ```
