@@ -1,0 +1,3 @@
+Notes from Lesson 6 Foundry Simple Storage:
+
+We're gonna be using Foundry framework because it is much faster and efficient than hardhat and truffle.
