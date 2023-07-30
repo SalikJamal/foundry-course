@@ -7,3 +7,5 @@ WSL and GIT setup done!
 Testing commit, now!
 
 Testing another commit!
+
+Another with cache token!
