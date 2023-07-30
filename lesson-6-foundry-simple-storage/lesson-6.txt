@@ -5,3 +5,5 @@ We're gonna be using Foundry framework because it is much faster and efficient t
 Setup WSL and Foundry
 WSL and GIT setup done!
 Testing commit, now!
+
+Testing another commit!
