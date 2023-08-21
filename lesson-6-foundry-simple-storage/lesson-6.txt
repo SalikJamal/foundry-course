@@ -1,3 +1,10 @@
 Notes from Lesson 6 Foundry Simple Storage:
 
 We're gonna be using Foundry framework because it is much faster and efficient than hardhat and truffle.
+
+RPC URL is https endpoint that we send API calls to when sending transactions.
+
+Infura is a node as service provider.
+
+The chain ID is used for signing transactions. It must match the chain ID returned by the network. 
+You can enter a decimal or '0x'-prefixed hexadecimal number, but we will display the number in decimal.
