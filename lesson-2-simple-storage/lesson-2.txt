@@ -2,7 +2,8 @@ Notes from Lesson 2 Simple Storage:
 
 Remix Intro:
 
-Always define version on top of your contract file because it is important to know specifiy version of solidity you are using.
+Always define version on top of your contract file because it is important to specifiy version of solidity you are using so the compiler uses
+that version to compile your contracts.
 
 Write comments in code to refer and understand it later on.
 
@@ -25,7 +26,7 @@ bytes (bytes is a lower level type) (default = 0x00)
 
 bit and bytes are units to measure computer data
 bytes consist of 8 bits
-bits are just 1 and 0'
+bits are just 1 and 0
 big B is for bytes
 small b is for bits
 
@@ -37,7 +38,7 @@ Arguments in function should have a different name than state variables to diffe
 
 Similar to our addresses our smart contracts have their own addresses and wallet as well.
 
-Any modifications on the blockchain our done executing transactions.
+Any modifications on the blockchain are done by executing transactions.
 
 Default visibility of state variables is internal.
 
@@ -61,14 +62,14 @@ Function Visibility:
 
 external:
 External functions are part of the contract interface, which means they can be called from other contracts and via transactions. 
-An external function f cannot be called internally (i.e. f() does not work, but this.f() works).
+An external function f() cannot be called internally (i.e. f() does not work, but this.f() works).
 
 public:
 Public functions are part of the contract interface and can be either called internally or via message calls.
 
 internal:
 Internal functions can only be accessed from within the current contract or contracts deriving from it. They cannot be accessed externally. 
-Since they are not exposed to the outside through the contract’s ABI, they can take parameters of internal types like mappings or storage references.
+Since they are not exposed to the outside through the contract's ABI, they can take parameters of internal types like mappings or storage references.
 
 private:
 Private functions are like internal ones but they are not visible in derived contracts.
@@ -80,7 +81,7 @@ Solidity has some functions that don't have to create a transaction to call them
 a view or pure function does cost gas only when a gas cost transaction is calling it.
 
 
-A function marked "view" means we're going to read state from the blockchain.
+A function marked "view" means we're going to read state but not modify the state from the blockchain.
 A function market "pure" means we're going to neither read or modify the state.
 
 State variables are also knowns as storage variables.
@@ -104,10 +105,10 @@ Memory, Storage & Calldata:
 Inside of functions most variables default to memory variables.
 
 
-Evm manages information in six places:
+EVM manages information in six places:
 
-Memory: Memory is the place where the variable exists for the duration of function call only. Memory keyword needs to be specified for mappings, structs and arrays. Strings are also an array of bytes.
-Difference between calldata and memory is that memory variable can be manipulated, reassigned but calldata cannot be modified or resigned.
+Memory: Memory is the place where the variable exists for the duration of function call only. Memory keyword needs to be specified for mappings, structs and arrays. 
+Strings are also an array of bytes. Difference between calldata and memory is that memory variable can be manipulated, reassigned but calldata cannot be modified or resigned.
 
 Calldata: Similar to Memory, cannot be reassigned or modified and both are temporary variables.
 
