@@ -1,6 +1,6 @@
 Notes from Lesson 3 Storage Factory:
 
-The ability for smart contracts to interact with each other seamlessly is knows as composibility. Smart contracts are composible beacuse they can't easily
+The ability for smart contracts to interact with each other seamlessly is knows as composability. Smart contracts are composable beacuse they can easily
 interact with each other.
 
 The way to define any varibles is
@@ -33,7 +33,7 @@ store and retrieve functions in every single contract.
 
 Inheritance:
 
-Inheriting contracts lets you use all of the contracts variables and functions in the contract which inherits, for example if contract A inherits contract B, then 
+Inheriting contracts lets you use all of the contracts variables and functions in the contract which we inherit, for example if contract A inherits contract B, then 
 contract A will have all functions/variables of contract B. The syntax for inheritance is:
 
 Contract A is B {}
