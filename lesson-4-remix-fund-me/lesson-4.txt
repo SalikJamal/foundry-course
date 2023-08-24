@@ -20,15 +20,15 @@ If you send a failed transaction, you will still spend gas but it'll revert ever
 Every single transaction you send will have following fields:
 
 1. Nonce: tx count for the account
-2. Gas Price: price per unit of gas(in wei)
+2. Gas Price: price per unit of gas (in wei)
 3. Gas limit: max gas that this tx can use
 4. To: address that the tx is sent to
-5. value: amount of wei to send
+5. value: amount of wei sent in the transaction
 6. Data: what to send to the "To" address
 7. v, r, s: components of tx signature
 
 How to convert a dollar value to the equivalent of ether in order to make the minimum amount check.
-We'll be using decentralized oracles for this, chainlink.
+We'll be using decentralized oracles for this, Chainlink.
 
 
 The smart contract connectivity problem or the oracle problem is that smart contracts can not see or compute with external/outside data.
@@ -39,7 +39,7 @@ Centralized oracles are a point of failure, because they're not decentralized. W
 Chainlink has decentralized oracles network which is awesome for this thing.
 
 Blockchains can't do API calls
-
+--- Continue revision from here -------------
 Chainlink networks can be completely customized to bring any data or any computation that we want.
 Chainlink is a technology to get external data and computation into our smart contracts, and getting that data in a decentralized manner.
 Chainlink data feeds are powering over $50 billion in Defi World
