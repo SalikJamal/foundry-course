@@ -39,10 +39,10 @@ Centralized oracles are a point of failure, because they're not decentralized. W
 Chainlink has decentralized oracles network which is awesome for this thing.
 
 Blockchains can't do API calls
---- Continue revision from here -------------
+
 Chainlink networks can be completely customized to bring any data or any computation that we want.
 Chainlink is a technology to get external data and computation into our smart contracts, and getting that data in a decentralized manner.
-Chainlink data feeds are powering over $50 billion in Defi World
+Chainlink data feeds are powering over $50 billion users in Defi World
 
 Interfaces:
 
@@ -59,7 +59,7 @@ the interface without needing knowledge of the specific implementation details.
 You can typecast variables by wrapping variables into parenthesis of the variable type, eg:
 
 uint256 price = 10;
-typecast to int256
+typecasting to int256
 int256(price);
 
 Always multiply before dividing because only whole numbers work in solidity.
