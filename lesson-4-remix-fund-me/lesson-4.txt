@@ -211,7 +211,7 @@ Convention for naming immutable variables is i_variableName, like i_owner;
 
 Custom errors??
 
-custom errors save gas instead of the entire string which is saved in storage.
+Custom errors save gas, instead of the entire string which is saved in storage.
 its an if statment instead of require.
 
 Receive and Fallback??
