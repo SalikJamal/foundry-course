@@ -85,7 +85,7 @@ initiated the transaction.
 
 What is a library in solidity?
 
-Library is a type of contract which let's you reuse code but you can't declare state variables and you can't send ether.
+Library is a type of contract which lets you reuse code but you can't declare state variables and you can't send ether.
 Library is embedded into the contract if all library functions are internal, otherwise the library must be deployed and 
 then linked before contract is deployed.
 
@@ -113,7 +113,7 @@ Before version 0.8 you could overflow the max limit of a uint which would reset 
 This would result in loss of data, so the safeMath library was used to check if any arithmetic operation is overflowing or underflowing
 a variable and would throw error to prevent loss of data.
 
-After version 0.8, solidity does everything that safeMath library does but about of the box, so no need for additional
+After version 0.8, solidity does everything that safeMath library does out of the box, so no need for additional
 libraries.
 
 You can use the "unchecked" keyword to disable checks for underflowing and overflowing in versions later than 0.8.
