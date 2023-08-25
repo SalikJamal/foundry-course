@@ -113,8 +113,7 @@ Before version 0.8 you could overflow the max limit of a uint which would reset 
 This would result in loss of data, so the safeMath library was used to check if any arithmetic operation is overflowing or underflowing
 a variable and would throw error to prevent loss of data.
 
-After version 0.8, solidity does everything that safeMath library does out of the box, so no need for additional
-libraries.
+After version 0.8, solidity does everything that safeMath library does out of the box, so no need for additional libraries.
 
 You can use the "unchecked" keyword to disable checks for underflowing and overflowing in versions later than 0.8.
 Using the "unchecked" keyword can allow for gas optimization, but only use it if you're 1000% sure the variable will not undeflow or overflow.
@@ -156,7 +155,7 @@ payable msg.sender is an address that can transfer currency
 payable(msg.sender).transfer(address(this).balance);
 
 address(this) refers to the address of the contract
-.balance functions returns balance of the contract
+.balance functions returns balance of the native token of the address
 
 usually transfer cost 2100 gas, but our transfer function is capped at 2300, and if in case it goes above 2300 gas it'll throw error and rever the transaction.
 
@@ -178,21 +177,21 @@ It also returns data which you can use when calling different methods using the 
 
 The paranthesis after call "("")" specifies we are not calling any function in case of sending ether.
 
-call with re-entrancy guard is the recommended way to use.
+Call method with re-entrancy guard is the recommended way to use.
 
 Constructors??
 
 Constructors are functions which are run when the contract is deployed. They will operate all the computation at the time of deployment of the contract.
 
+Custom Modifiers??
 
-Modifiers??
+Custom modifiers are function modifiers which can be created once and utilized in many places. They run a check, which you put, if the check is true it executes
+the function otherwise it reverts the transaction.
 
-Modifiers are function modifier which can be created once and utilized in many places. They run a check, which you put, if it the check is true it executes the function
-otherwise it reverts the transaction.
+The _ defines the execution sequence in function; if it is first in modifier, then the function code will run first then the modifier.
+If it is bottom in modifier, then the modifier will run and if its true then the function will run.
 
-The _ defines the execution sequence in function if it is first in modifier, then the function code will run first then the modifier, if it is bottom in modifier.
-Then the modifier will run and if its true then the function will run.
-
+Syntax:
 modifier onlyOwner {
     require(msg.sender == owner, "Sender is not the owner!");
     _;
