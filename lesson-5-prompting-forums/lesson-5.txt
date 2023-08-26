@@ -31,7 +31,7 @@ Ask on the support forum or github for the specific tool you are using.
 
 7 Triage steps for this course:
 
-1. Limit self-triage to 15/20 mins.
+1. Limit self-debugging to 15/20 mins.
 2. Don't be afraid to ask AI, but don't skip your own self learning (Use AI scarcely, but don't be afraid to use it)
 3. Use the forums if stuck anywhere.
 4. Google the exact error if AI doesn't know, the forums doesn't know.
