@@ -10,6 +10,7 @@ The chain ID is used for signing transactions. It must match the chain ID return
 You can enter a decimal or '0x'-prefixed hexadecimal number, but we will display the number in decimal.
 
 Use command "anvil" to start the blockchain
+You can use anvil or ganache to start the blockchain, ganache will give detailed output of transactions
 Use below command to deploy to local blockchain, make sure the local blockchain is running, and the contract name is correct
 
 "forge create SimpleStorage --interactive --rpc-url ${rpcUrl} --private-key ${privateKey}"
