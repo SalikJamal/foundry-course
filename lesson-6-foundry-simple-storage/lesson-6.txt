@@ -18,3 +18,6 @@ Use below command to deploy to local blockchain, make sure the local blockchain 
 Don't ever paste private key in vs code terminal, or even in terminal history.
 To remove history, use command "history -c"
 Use command "history" to see history of your commands
+
+Use the below command to convert hex values to decimal values, this comes built in Forge.
+"cast --to-base ${hexValue} dec"
