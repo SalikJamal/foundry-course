@@ -42,7 +42,7 @@ be shut down after deployment.
 Command to deploy via scripting:
 
 const fileName = DeploySimpleStorage.s.sol
-const rpcUrl = https://127.0.0.1:8545
+const rpcUrl = http://127.0.0.1:8545
 const privateKey = process.env.PRIVATE_KEY
 
 forge script script/${fileName} --rpc-url {$rpcUrl} --broadcast --private-key ${privateKey}
