@@ -23,3 +23,26 @@ Use the below command to convert hex values to decimal values, this comes built 
 "cast --to-base ${hexValue} dec"
 
 Testing git wsl
+
+
+Lesson 6 Part 14: Deploying to local blockchain via Scripting
+-------------------------------------------------------------
+
+Use the .s.sol extension for scripting files in solidity. The .s.sol extension is a foundry convention.
+
+The lib folder has a forge-std folder which stands for forge standard library. It has many utility 
+functions you can use for deployment and scripting smart contracts.
+
+vm.startBroadcast() means send everything after this line to the RPC. 
+And vm.stopBroadcast() means stop sending after this line.
+
+In foundry, if you don't specifiy an RPC Url then it will deploy to a temporary blockchain which will
+be shut down after deployment.
+
+Command to deploy via scripting:
+
+const fileName = DeploySimpleStorage.s.sol
+const rpcUrl = https://127.0.0.1:8545
+const privateKey = process.env.PRIVATE_KEY
+
+forge script script/${fileName} --rpc-url {$rpcUrl} --broadcast --private-key ${privateKey}
