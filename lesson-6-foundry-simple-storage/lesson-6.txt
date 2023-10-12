@@ -81,7 +81,10 @@ which contain opcodes that the EVM understands.
 
 
 Lesson 6 Part 16: Private Key Safety II
----------------------------------------
+--------------------------------------- 
 
 We can put environment variables in .env files, we put sensitive variables in an .env file.
 Never launch production code with the .env file.
+
+When you have real money, you will not use .env to store private keys, you will use --interactive flag or we're gonna use keystore
+file with a password once foundry adds it.
