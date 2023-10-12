@@ -78,3 +78,10 @@ Every single wallet has a counter of transcations which is basically a nonce. It
 
 Every time you change something in the blockchain it goes through a transaction, and the change is always in the data field of the transaction
 which contain opcodes that the EVM understands.
+
+
+Lesson 6 Part 16: Private Key Safety II
+---------------------------------------
+
+We can put environment variables in .env files, we put sensitive variables in an .env file.
+Never launch production code with the .env file.
