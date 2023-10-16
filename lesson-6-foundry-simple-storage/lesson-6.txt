@@ -88,3 +88,8 @@ Never launch production code with the .env file.
 
 When you have real money, you will not use .env to store private keys, you will use --interactive flag or we're gonna use keystore
 file with a password once foundry adds it.
+
+
+Lesson 6 Part 17: ThirdWeb Deploy
+
+You can use ThirdWeb to deploy to the blockchain, it is a development tool for faster developemnt of Dapp.
