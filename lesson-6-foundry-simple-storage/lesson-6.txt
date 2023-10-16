@@ -91,5 +91,28 @@ file with a password once foundry adds it.
 
 
 Lesson 6 Part 17: ThirdWeb Deploy
+---------------------------------
 
 You can use ThirdWeb to deploy to the blockchain, it is a development tool for faster developemnt of Dapp.
+
+
+Lesson 6 Part 18: Cast Send
+---------------------------
+
+Foundry has another tool built-in called cast. A specific function of cast tool we will be using is called "send" which is used to sign
+and publish a transcation.
+
+To call a specific function of a smart contract using cast tool we can do:
+
+cast send ${contractAddress} "${functionName}(${functionParameters})" ${functionArguments} --rpc-url ${rpcUrl} --private-key ${privateKey}
+
+eg: 
+
+cast send ${0x5FbDB2315678afecb367f032d93F642f64180aa3} "${store(uint256)}" ${123} --rpc-url ${http://blah-blah} --private-key ${0x000000}
+
+
+To read something on blockchain we use the following cast command, reading doesn't create a transaction on the blockchain:
+
+cast call ${contractAddress} "${functionName}()"
+
+When using this function we get the hex value back, this is where we we use cast's "-to-base" flag to convert hex to decimal.
