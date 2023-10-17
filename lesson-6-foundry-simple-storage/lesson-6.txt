@@ -48,6 +48,8 @@ const privateKey = process.env.PRIVATE_KEY
 forge script script/${fileName} --rpc-url {$rpcUrl} --broadcast --private-key ${privateKey}
 
 
+--broadcast flag means to send on a network instead of simulating it.
+
 Lesson 6 Part 15: What is a transaction? (But actually)
 -------------------------------------------------------
 
@@ -116,3 +118,14 @@ To read something on blockchain we use the following cast command, reading doesn
 cast call ${contractAddress} "${functionName}()"
 
 When using this function we get the hex value back, this is where we we use cast's "-to-base" flag to convert hex to decimal.
+
+
+Lesson 6 Part 19: Deploy to Testnet
+-----------------------------------
+
+First we're gonna need an RPC URL for an actual testnet. You can either have your own RPC url by running a node on your machine.
+Or you can use node as a service providers like Alchemy, Infura, QuickNode, etc.
+
+Then you're gonna need a private key for an actual testnet account, you can create one on metamask and get the private key.
+
+Store both of them in .env and run the same deployment command but with the --broadcast flag so it sends to the testnet instead of simulating it.
