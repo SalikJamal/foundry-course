@@ -129,3 +129,22 @@ Or you can use node as a service providers like Alchemy, Infura, QuickNode, etc.
 Then you're gonna need a private key for an actual testnet account, you can create one on metamask and get the private key.
 
 Store both of them in .env and run the same deployment command but with the --broadcast flag so it sends to the testnet instead of simulating it.
+
+
+Lesson 6 Part 20: Manual Verification
+-----------------------------------
+
+On etherscan, if you switch to the bytecode tab you can see the bytecode of the contract. Which is not very readable and ugly to look at.
+What you can do is verify the contract so that everyone can read the code.
+
+The manual way to verify a contract on Etherscan is:
+
+1. Clicking on verify contract, on the contract tab.
+2. Selecting compiler type, in our case solidity single file
+3. Selecting compiler and click on continue
+4. Copy the contract code, and paste it in the contract code field and select optimize to yes.
+5. Pass the captcha, then verify and publish button.
+6. Check on the contract tab, and you will see the contract code if it was done correctly.
+
+
+By verifying a contract, people can interact with your contract from within etherscan just like remix.
