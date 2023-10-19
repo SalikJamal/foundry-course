@@ -148,3 +148,14 @@ The manual way to verify a contract on Etherscan is:
 
 
 By verifying a contract, people can interact with your contract from within etherscan just like remix.
+
+
+Lesson 6 Part 21: Cleaning up
+-----------------------------
+
+To automatically format code, use `forge fmt` command.
+
+Always create a ReadMe.md file for every project you create. This will give other people information about your project, how to run it.
+And any other information that they should know.
+
+You can use AI to write markdown for your project.
