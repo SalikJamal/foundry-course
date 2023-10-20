@@ -188,3 +188,18 @@ You can also debug the errors of your transactions within from the dashboard.
 It also has a mempool watcher which shows you all of the transactions, mined, dropped, or pending.
 
 Alchemy's documentation has all of the information you need to get started.
+
+
+---------------
+Lesson 6 Recap:
+
+- Learned how to create new foundry project using "forge --init"
+- Basic foundry commands such as Cast, Anvil and Forge.
+- Forge is used for compiling and interacting with contracts
+- Cast is used for interacting with contracts that have been deployed.
+- Anvil is used to deploy a local blockchain.
+- When we send a transaction in our metamask we send an Http request to the RPC URL.
+- We can also use node-as-a-service providers to have our own RPC url and make transactions from our Foundry project.
+- Learnt how to compile and deploy smart contract using scripts in foundry.
+- Leant how to keep our private keys safe using environment variables.
+- Learnt how to auto format our contracts using "forge fmt".
