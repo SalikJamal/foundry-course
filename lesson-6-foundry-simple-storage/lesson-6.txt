@@ -159,3 +159,32 @@ Always create a ReadMe.md file for every project you create. This will give othe
 And any other information that they should know.
 
 You can use AI to write markdown for your project.
+
+
+Lesson 6 Part 22: Alchemy & The mempool
+---------------------------------------
+
+Alchemy has really cool features when learning what happens with our transaction, when we send a transaction it gets sent to a mempool.
+It enters the mempool and waits for a miner to pick it up and put it in a block.
+
+Features of Alchemy:
+
+Alchemy is a node provider, and web3 development platform.
+
+Alchemy provides development tools to help you build and scale your blockchain application.
+They are reliable, scalable and accurate.
+
+Alchemy SuperNode:
+
+Supernode is a blockchain engine that acts as a load balancer on top of your node and makes sure you get the latest
+available data from the blockchain. They have enhanced APIs which allow you to pull data from the blockchain.
+
+Alchemy supports majority of EVM chains, and solana as well.
+
+The dashboard has all of the metrics to understand your application's performance.
+
+You can also debug the errors of your transactions within from the dashboard.
+
+It also has a mempool watcher which shows you all of the transactions, mined, dropped, or pending.
+
+Alchemy's documentation has all of the information you need to get started.
