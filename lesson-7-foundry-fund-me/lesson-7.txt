@@ -1,0 +1,6 @@
+---------------------------------
+Lesson 7 Part 1 | Foundry Fund Me
+
+We are gonna be creating our remix-fund-me project in Foundry toolkit now.
+
+We'll be doing professional testing, scripting and deployment using Foundry.
