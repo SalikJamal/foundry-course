@@ -4,3 +4,17 @@ Lesson 7 Part 1 | Foundry Fund Me
 We are gonna be creating our remix-fund-me project in Foundry toolkit now.
 
 We'll be doing professional testing, scripting and deployment using Foundry.
+
+
+--------------------------------------
+Lesson 7 Part 2 | Testing Introduction
+
+You can use the following command to run the tests:
+
+forge test
+
+This command will run all the tests in the test file and check if they pass or fail.
+In our Counter.t.sol file, what will happen is:
+
+1. It will deploy our Counter smart contract, sets the number to 0
+2. Then increments the number to 1, then checks/asserts if the number is equal to 1
