@@ -110,7 +110,7 @@ cast send ${contractAddress} "${functionName}(${functionParameters})" ${function
 
 eg: 
 
-cast send ${0x5FbDB2315678afecb367f032d93F642f64180aa3} "${store(uint256)}" ${123} --rpc-url ${http://blah-blah} --private-key ${0x000000}
+cast send 0x5FbDB2315678afecb367f032d93F642f64180aa3 "store(uint256)" 123 --rpc-url http://blah-blah --private-key ${0x000000}
 
 
 To read something on blockchain we use the following cast command, reading doesn't create a transaction on the blockchain:
