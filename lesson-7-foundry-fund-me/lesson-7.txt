@@ -18,3 +18,7 @@ In our Counter.t.sol file, what will happen is:
 
 1. It will deploy our Counter smart contract, sets the number to 0
 2. Then increments the number to 1, then checks/asserts if the number is equal to 1
+
+--------------------------------------
+Lesson 7 Part 3 | Setup continued
+
