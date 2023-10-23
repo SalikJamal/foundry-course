@@ -22,3 +22,12 @@ In our Counter.t.sol file, what will happen is:
 --------------------------------------
 Lesson 7 Part 3 | Setup continued
 
+We copy all of the contract from RemixFundMe and copy it in this project.
+
+We can install the dependencies using:
+
+forge install ${organizationName/repoName}@${version} ${flags}
+Eg: forge install smartcontractkit/chainlink-brownie-contracts@0.8.0 --no-commit
+
+Use "forge compile" to compile the contracts.
+
