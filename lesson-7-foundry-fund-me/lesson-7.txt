@@ -57,7 +57,7 @@ Check if our contract is deploying correctly:
     - Check the contract deployment by checking a public variable or function
 
 
-----------------------
+---------------------------------
 Lesson 7 Part 5 | Debugging Tests
 
 How to find out what's the issue when a test fails?
@@ -65,3 +65,17 @@ How to find out what's the issue when a test fails?
 We can console.log the variables to check thier values.
 
 Use the command "forge test -vv" to enable verbose logging.
+
+
+---------------------------------
+Lesson 7 Part 6 | Advanced Deploy Scripts
+
+Scripting allows you to deploy your smart contracts on one command instead of deploying them manually.
+This makes the process smooth and hassle free.
+
+Import the Script contract from "forge-std/Script.sol" to use the functions.
+
+Create the run function to deploy the contract.
+
+vm.startBroadcast() means send everything after this line to the RPC. 
+And vm.stopBroadcast() means stop sending after this line.
