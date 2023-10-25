@@ -55,3 +55,11 @@ Check if our contract is deploying correctly:
     - Import the contract in the test file
     - Deploy the contract in the setUp function
     - Check the contract deployment by checking a public variable or function
+
+
+----------------------
+Lesson 7 Part 5 | Debugging Tests
+
+How to find out what's the issue when a test fails?
+
+We can console.log the variables to check thier values.
