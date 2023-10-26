@@ -79,3 +79,51 @@ Create the run function to deploy the contract.
 
 vm.startBroadcast() means send everything after this line to the RPC. 
 And vm.stopBroadcast() means stop sending after this line.
+
+
+---------------------------------
+Lesson 7 Part 7 | Forked Tests
+
+To run a single test use below command:
+
+forge test --match-test ${testFunctionName}
+
+The default behavior for forge test is to only display a summary of passing and failing tests. 
+You can control this behavior by increasing the verbosity (using the -v flag). 
+Each level of verbosity adds more information:
+
+Level 2 (-vv): Logs emitted during tests are also displayed. That includes assertion errors from tests, 
+showing information such as expected vs actual.
+Level 3 (-vvv): Stack traces for failing tests are also displayed.
+Level 4 (-vvvv): Stack traces for all tests are displayed, and setup traces for failing tests are displayed.
+Level 5 (-vvvvv): Stack traces and setup traces are always displayed.
+
+
+When you run tests or deploy contract without specifying the network, it runs on the local anvil blockchain.
+
+What should we do to work with contracts outside our local blockchain?
+
+When we run our tests, we can pass an $RPC_URL in the --fork-url flag which will fork the blockchain from that url.
+
+Eg: forge test --match-test ${testFunctionName} -vvv --fork-url ${RPC_URL}
+
+The issue with forking is that you will run many API calls which will run up your bill. So try to avoid forking as much as possible.
+Only do it with the tests that can't be done locally.
+
+We can use the below command to see how much our code is tested, we can pass the RPC_URL as well using the --fork-url flag
+
+forge coverage 
+
+Testing modes:
+1. Unit
+    - Testing a specific part of our code
+
+2. Integration
+    - Testing how our code works with other parts of our code
+
+3. Forked
+    - Testing our code on a simulated real environment
+
+4. Staging
+    - Testing our code in a real environment that is not production
+
