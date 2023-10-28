@@ -24,10 +24,13 @@ contract FundMe {
 
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
+    AggregatorV3Interface private s_priceFeed;
+
     error FundMe__NotOwner();
 
-    constructor() {
+    constructor(address priceFeed) {
         i_owner = msg.sender;
+        s_priceFeed = AggregatorV3Interface(priceFeed);
     }
 
     modifier onlyOwner {
@@ -44,13 +47,12 @@ contract FundMe {
     }
 
     function fund() public payable onlyOwner {
-        require(msg.value.getConversionRate() >= MIN_USD, "Didn't sent enough ETH"); // 1e18 = 1 ETH
+        require(msg.value.getConversionRate(s_priceFeed) >= MIN_USD, "Didn't sent enough ETH"); // 1e18 = 1 ETH
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
     function withdraw() public onlyOwner {
-
         for(uint funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
@@ -60,11 +62,10 @@ contract FundMe {
         funders = new address[](0); // A brand new array with data type address with value to be 0 addresses
         (bool callSuccess, ) = payable(msg.sender).call{ value: address(this).balance }("");
         require(callSuccess, "Call Failed");
-
     }
 
     function getVersion() public view returns(uint256) {
-        return AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306).version();
+        return s_priceFeed.version();
     }
  
 }

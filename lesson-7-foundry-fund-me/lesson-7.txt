@@ -20,7 +20,7 @@ In our Counter.t.sol file, what will happen is:
 2. Then increments the number to 1, then checks/asserts if the number is equal to 1
 
 
---------------------------------------
+---------------------------------
 Lesson 7 Part 3 | Setup continued
 
 We copy all of the contract from RemixFundMe and copy it in this project.
@@ -67,7 +67,7 @@ We can console.log the variables to check thier values.
 Use the command "forge test -vv" to enable verbose logging.
 
 
----------------------------------
+-----------------------------------------
 Lesson 7 Part 6 | Advanced Deploy Scripts
 
 Scripting allows you to deploy your smart contracts on one command instead of deploying them manually.
@@ -81,7 +81,7 @@ vm.startBroadcast() means send everything after this line to the RPC.
 And vm.stopBroadcast() means stop sending after this line.
 
 
----------------------------------
+------------------------------
 Lesson 7 Part 7 | Forked Tests
 
 To run a single test use below command:
@@ -127,3 +127,18 @@ Testing modes:
 4. Staging
     - Testing our code in a real environment that is not production
 
+
+----------------------------------------
+Lesson 7 Part 8 | Testing Deploy Scripts
+
+We always need to make sure that our code is modular and reusable.
+It shouldn't have any hardcoded values anywhere.
+
+Refactoring means when you're not changing any functionality but just the way the code is written.
+Or the improving the performance and modularity of the code.
+
+Always make sure that you are not repeating your code anywhere.
+
+Make sure the deploy and testing scripts have the same variables and values.
+
+And whenever creating smart contracts, make sure they can operate interchangebely on different chains.
