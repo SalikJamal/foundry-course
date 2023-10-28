@@ -142,3 +142,16 @@ Always make sure that you are not repeating your code anywhere.
 Make sure the deploy and testing scripts have the same variables and values.
 
 And whenever creating smart contracts, make sure they can operate interchangebely on different chains.
+
+
+----------------------------------------------
+Lesson 7 Part 9 | Refactoring II Helper Config
+
+If you test your code by always passing the --fork-url which will make API calls to the RPC then
+it will run up your bill even when you don't want to test the forked tests.
+
+In order to avoid that, we can create something called Mock tests. What happens that it will create
+our own mock contract on our local anvil blockchain for the duration of the test.
+
+We can create a helper config file in our deploy scripts to return the right network price feed based on the chainId.
+So our code will work interchangebely on every EVM chain.
