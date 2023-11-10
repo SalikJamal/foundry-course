@@ -157,8 +157,17 @@ We can create a helper config file in our deploy scripts to return the right net
 So our code will work interchangebely on every EVM chain.
 
 
-----------------------------------------------
+------------------------------------------
 Lesson 7 Part 10 | Refactoring III Mocking
 
 A mock contract is a dummy contract, a fake contract. We can deploy these mock contracts on our local blockchain and
 return their addresses to test our code.
+
+--------------------------------
+Lesson 7 Part 11 | Magic Numbers
+
+When you use numbers in your code without any explanation, it is called a magic number.
+So when you later on after a long time look at the same code you'll not understand what that number means right away
+without some digging. So in order to avoid that, we create constant variables and use them instead of the directly using numbers.
+
+This makes our code readable and understandable.
