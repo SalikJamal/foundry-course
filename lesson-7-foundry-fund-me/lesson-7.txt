@@ -155,3 +155,10 @@ our own mock contract on our local anvil blockchain for the duration of the test
 
 We can create a helper config file in our deploy scripts to return the right network price feed based on the chainId.
 So our code will work interchangebely on every EVM chain.
+
+
+----------------------------------------------
+Lesson 7 Part 10 | Refactoring III Mocking
+
+A mock contract is a dummy contract, a fake contract. We can deploy these mock contracts on our local blockchain and
+return their addresses to test our code.
