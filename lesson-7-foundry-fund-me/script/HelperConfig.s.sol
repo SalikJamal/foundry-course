@@ -21,6 +21,7 @@ contract HelperConfig is Script {
     NetworkConfig public activeNetworkConfig;
 
     uint8 public constant DECIMALS = 8;
+    uint8 public constant ETH_MAINNET_CHAINID = 1;
     uint32 public constant SEPOLIA_CHAINID = 11155111;
     int256 public constant INITIAL_PRICE = 2000e8;
 
@@ -31,10 +32,10 @@ contract HelperConfig is Script {
     constructor() {
         if(block.chainid == SEPOLIA_CHAINID) {
             activeNetworkConfig = getSepoliaEthConfig();
-        } else if(block.chainid == 1) {
+        } else if(block.chainid == ETH_MAINNET_CHAINID) {
             activeNetworkConfig = getMainnetEthConfig();
         } else {
-            activeNetworkConfig = getAnvilEthConfig();
+            activeNetworkConfig = getOrCreateAnvilEthConfig();
         }
     }
 
@@ -48,8 +49,11 @@ contract HelperConfig is Script {
         return mainnetConfig;
     }
 
-    function getAnvilEthConfig() public returns(NetworkConfig memory) {
+    function getOrCreateAnvilEthConfig() public returns(NetworkConfig memory) {
         
+        // If already deployed on local then return that instead of deploying new one
+        if(activeNetworkConfig.priceFeed != address(0)) return activeNetworkConfig;
+
         // 1. Deploy the mocks on local network
         // 2. Return the mock address
 
