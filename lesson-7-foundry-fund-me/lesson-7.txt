@@ -173,7 +173,7 @@ without some digging. So in order to avoid that, we create constant variables an
 This makes our code readable and understandable.
 
 
---------------------------------
+----------------------------------------
 Lesson 7 Part 12 | Refactoring Continued
 
 Always make sure you name your functions as verbose so you know what they do just by looking at the name.
@@ -181,3 +181,35 @@ Always make sure you name your functions as verbose so you know what they do jus
 Now after the Helper config, we can run all of our tests using "forge test" without having to pass the --fork-url flag.
 It will deploy and use our mock tests in case of no --fork-url flag, it will work without failing, and will be cheaper
 and faster.
+
+
+----------------------------------
+Lesson 7 Part 13 | More Cheatcodes
+
+You can go to the foundry docs and check out the cheatcodes section to see all the cheatcodes you can benefit from.
+
+The expectRevert() cheatcode allows us to revert the next line. It is equivalent to assert(this tx fails/reverts)
+
+For naming convention in variables, use prefixes to show the variable type. A storage variable with s_, immutable with
+i_ and constant variables with UPPER_CASE naming.
+
+Also, declare all storage variables private unless required to be public.
+
+Function orders should generally follow a pattern, like this:
+
+// Functions Order:
+//// constructor
+//// receive
+//// fallback
+//// external
+//// public
+//// internal
+//// private
+//// view / pure
+
+Another cheatcode which solves the issue of knowing which contracts executes which function is the "prank" cheatcode.
+It sets msg.sender to the specified address for the next call.
+
+There's another cheatcode called "makeAddr" which creates a new address from the provided name.
+
+Another cheatcode called "deeal" which allows us to set balance of an address. It takes the name of the address and the amount.
