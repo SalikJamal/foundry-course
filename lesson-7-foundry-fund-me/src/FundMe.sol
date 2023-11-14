@@ -20,7 +20,7 @@ contract FundMe {
     
     address[] private s_funders;
 
-    address public immutable i_owner;
+    address private immutable i_owner;
 
     mapping(address funder => uint256 amountFunded) private s_addressToAmountFunded;
 

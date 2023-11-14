@@ -213,3 +213,35 @@ It sets msg.sender to the specified address for the next call.
 There's another cheatcode called "makeAddr" which creates a new address from the provided name.
 
 Another cheatcode called "deeal" which allows us to set balance of an address. It takes the name of the address and the amount.
+
+--------------------------------
+Lesson 7 Part 14 | More Coverage
+
+Every time you run a test, or all of the tests. The setup function gets called everytime.
+And then all of the test functions or the selected function runs.
+
+The cheatcode vm.expectRevert() ignores the vm objects and just reverts the next line.
+
+We should make sure our tests contain as minimal code as required but still completing all the tests
+required.
+
+You can create modifiers if there is repeating test or setup code required. Then just attach that modifier
+in the function declaration and it will run the modifier code before running the function code. This will 
+save you a lot of time and code.
+
+When writing tests, follow the below pattern:
+
+Arrange: First do the required setup for the test.
+
+Act: Then do the action you want to test.
+
+Assert: Then assert the test
+
+The cheatcode "hoax" sets up a prank from an address that has some ether. It is from the forge-std library.
+If the balance is not specified, it will be set to 2^128 wei.
+
+As you can generate address 0 with address(0), you can generate addresses using address(1), address(2) etc as well.
+But the parameter passed in address() should be a uint160. It is cause uint160 has same bytes as address.
+
+vm.startPrank() and vm.stopPrank() works the same as vm.startBroadcast() and vm.stopBroadcast(). Anything in between
+will be sent by the address specified in the vm.startPrank() function.
